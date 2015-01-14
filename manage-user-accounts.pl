@@ -4,8 +4,9 @@ use Fcntl;
 use DBI;
 
 # Set User Defaults
-$webroot = "/srv/www/vhosts/stuwork1.uww.edu/docs/$course";
-$mysqlhost = "clawhammer.uww.edu";
+$fqdn = "washington.uww.edu"; #fully qualified domain name
+$mysqlhost = "washington.uww.edu";
+$webroot = "/srv/www/vhosts/$fqdn/docs/$course";
 
 ######################################################
 # SHOULD NOT NEED TO CHANGE ANYTHING BELOW THIS LINE #
@@ -202,7 +203,7 @@ Required:
  -s semester the semester code for the current semester - ex. 2127
 
 Optional:
- -w          flag to create web folders under stuwork1.uww.edu with symlinks into the users home folder (html_course)
+ -w          flag to create web folders under $fqdn with symlinks into the users home folder (html_course)
  -m          flag to create mysql database for each user
  -d          only creates the mysql database, no local user is created
  -u user     mysql username to use for creation
