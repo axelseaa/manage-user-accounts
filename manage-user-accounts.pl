@@ -192,10 +192,9 @@ The web folders are located in $webroot\$course/\$username.
 The students will have a symlink to the web folder in /home/students/\$username/html_\$course
 
 Example Usage:
-        $0 -f /home/axelsena/cs223_2127.txt -s 2127 -c cs223
-        $0 -f /home/axelsena/cs382_2137.txt -s 2137 -c cs382 -w
-        $0 -f /home/axelsena/cs482_2131.txt -s 2131 -c cs482 -w -m -u axelsena
-
+        $0 -f cs223_2127.txt -s 2127 -c cs223
+        $0 -f cs382_2137.txt -s 2137 -c cs382 -w
+        $0 -f cs482_2131.txt -s 2131 -c cs482 -w -m -u axelsena
 
 Required:
  -f file     course roster extract file - available at https://appsdev.uww.edu/dev/ltc/classrosters-compsci
