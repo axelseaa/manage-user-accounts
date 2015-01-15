@@ -6,7 +6,6 @@ use DBI;
 # Set User Defaults
 $fqdn = "washington.uww.edu"; #fully qualified domain name
 $mysqlhost = "washington.uww.edu";
-$webroot = "/srv/www/vhosts/$fqdn/docs/$course";
 
 ######################################################
 # SHOULD NOT NEED TO CHANGE ANYTHING BELOW THIS LINE #
@@ -18,6 +17,9 @@ my ($file,$course,$web,$remove,$mysql,$mysqluser,$semester,$dbonly) = ($opt_f,$o
 if ($file eq '' || $course eq '' || $semester eq '') {
         usage();
 }
+
+# Set Webroot
+$webroot = "/srv/www/htdocs/$course";
 
 if ($mysql) {
         usage() if ($mysqluser eq '');
